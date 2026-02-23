@@ -1,0 +1,15 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "_site",
+  "installCommand": "npm install",
+  "framework": null,
+  "cleanUrls": true,
+  "functions": {
+    "api/*.js": {
+      "runtime": "nodejs18.x"
+    }
+  },
+  "env": {
+    "SENDGRID_API_KEY": "@sendgrid_api_key"
+  }
+}

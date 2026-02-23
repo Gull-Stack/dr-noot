@@ -1,0 +1,72 @@
+{
+  "name": "Dr. Noot | Biomimetic Dentistry",
+  "tagline": "Save Your Natural Teeth for Life",
+  "description": "Dr. Arnoud Noot is American Fork, Utah's leading biomimetic dentist. Crown-free restorations, microscope precision, and minimally invasive care that preserves your natural teeth. Serving Utah County including Lehi, Pleasant Grove, Orem, and Provo.",
+  "url": "https://drnoot.com",
+  "phone": "(801) 756-7740",
+  "email": "DrNoot@drnoot.com",
+  "address": {
+    "street": "686 E 110 S #201",
+    "city": "American Fork",
+    "state": "UT",
+    "zip": "84003"
+  },
+  "colors": {
+    "primary": "#1a5276",
+    "secondary": "#2e86c1",
+    "accent": "#27ae60",
+    "light": "#fafbfc",
+    "dark": "#1a202c"
+  },
+  "social": {
+    "facebook": "https://www.facebook.com/DrNoot/"
+  },
+  "ga4": "",
+  "schemaType": "Dentist",
+  "nav": [
+    {
+      "label": "Services",
+      "url": "/services/"
+    },
+    {
+      "label": "About Dr. Noot",
+      "url": "/about/"
+    },
+    {
+      "label": "Patient Stories",
+      "url": "/reviews/"
+    },
+    {
+      "label": "Contact",
+      "url": "/contact/"
+    }
+  ],
+  "services": [
+    {
+      "name": "Biomimetic Dentistry",
+      "description": "Crown-free restorations that preserve your natural tooth structure",
+      "url": "/services/#biomimetic"
+    },
+    {
+      "name": "Preventative Care",
+      "description": "Advanced prevention that reduces decay by over 90%",
+      "url": "/services/#prevention"
+    },
+    {
+      "name": "Advanced Technology",
+      "description": "Microscope precision, air abrasion, and laser diagnostics",
+      "url": "/services/#technology"
+    },
+    {
+      "name": "Hygiene",
+      "description": "Ultrasonic cleaning and air polishing for the cleanest mouth you've ever had",
+      "url": "/services/#hygiene"
+    }
+  ],
+  "team": [],
+  "cta": {
+    "text": "Schedule Your Visit",
+    "url": "/contact/"
+  },
+  "footerLinks": []
+}

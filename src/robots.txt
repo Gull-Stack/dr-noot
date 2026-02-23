@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+
+# Important pages for crawling
+Allow: /services/
+Allow: /about/
+Allow: /reviews/
+Allow: /contact/
+Allow: /lifecycle/
+
+# Sitemap
+Sitemap: https://drnoot.com/sitemap.xml
+
+# Block common bot paths
+Disallow: /api/
+Disallow: /*.json$
+Disallow: /admin/
+Disallow: /wp-admin/
+Disallow: /wp-login/
+
+# Crawl delay for politeness
+Crawl-delay: 1

@@ -1,0 +1,203 @@
+---
+title: "Your Teeth Were Meant to Last a Lifetime"
+description: "Dr. Arnoud Noot is American Fork, Utah's leading biomimetic dentist. Crown-free restorations, microscope precision, and minimally invasive care that preserves your natural teeth. Serving Utah County including Lehi, Pleasant Grove, Orem, and Provo."
+layout: base.njk
+---
+
+{# HERO SECTION - StoryBrand: Problem + Solution #}
+<section class="hero">
+  <div class="hero-bg">
+    <img src="{{ '/assets/images/noot-home.jpg' | url }}" alt="Dr. Noot biomimetic dentist American Fork Utah" class="hero-image">
+  </div>
+  <div class="container">
+    <div class="hero-content">
+      <h1>Your Teeth Were Meant to Last a Lifetime</h1>
+      
+      <p class="hero-subtitle">Dr. Arnoud Noot uses biomimetic dentistry — the most advanced, minimally invasive approach — to save and restore your natural teeth without crowns, root canals, or unnecessary extractions.</p>
+      
+      <div class="hero-cta">
+        <a href="{{ '/contact/' | url }}" class="btn btn-primary btn-large">Schedule Your Visit</a>
+        <a href="{{ '/services/' | url }}" class="btn btn-outline btn-large">Learn About Biomimetic Dentistry</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# TRUST BAR #}
+<section class="trust-bar">
+  <div class="container">
+    <div class="trust-grid">
+      <div class="trust-item">
+        <div class="trust-number">18+</div>
+        <div class="trust-label">Years in American Fork</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">🎓</div>
+        <div class="trust-label">Academy of Biomimetic Dentistry</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-number">0</div>
+        <div class="trust-label">Crowns Placed</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">✈️</div>
+        <div class="trust-label">Air Force Trained</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# PROBLEM SECTION - The Traditional Approach Destroys Teeth #}
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2>The Traditional Approach Destroys Teeth</h2>
+      <p>Most dentists drill aggressively, place crowns that leak, and perform root canals that lead to tooth failure.</p>
+    </div>
+    
+    <div class="grid grid-3">
+      <div class="card">
+        <h3>All Crowns Eventually Leak</h3>
+        <p>Traditional crowns create hiding places for bacteria. Once bacteria gets underneath, it's impossible to clean, leading to decay and eventual tooth failure.</p>
+      </div>
+      
+      <div class="card">
+        <h3>The Cycle of Destruction</h3>
+        <p>Filling → bigger filling → crown → crown replacement → root canal → extraction. Each step weakens your tooth further until it's lost forever.</p>
+      </div>
+      
+      <div class="card">
+        <h3>Why It Persists</h3>
+        <p>Traditional dentistry is faster and more profitable. Crowns can be placed quickly, but they don't preserve your natural tooth structure like biomimetic approaches.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# SOLUTION SECTION - A Better Way #}
+<section class="section section-light">
+  <div class="container">
+    <div class="content-split">
+      <div class="content-text">
+        <div class="section-label">A Better Way</div>
+        <h2>Biomimetic Dentistry Preserves Your Natural Teeth</h2>
+        <p>Dr. Noot layers composite resins and crafts custom inlays, onlays, and veneers for a crown-free, seamless fit that preserves your natural tooth strength.</p>
+        
+        <div class="benefit-list">
+          <div class="benefit-item">
+            <strong>No painful needles</strong> — Advanced techniques eliminate discomfort
+          </div>
+          <div class="benefit-item">
+            <strong>No grinding drills</strong> — Preserve maximum tooth structure
+          </div>
+          <div class="benefit-item">
+            <strong>Crown-free restorations</strong> — Seamless integration with your natural teeth
+          </div>
+        </div>
+      </div>
+      
+      <div class="content-image">
+        <img src="{{ '/assets/images/noot-dentistry-woman-smiling-no-more-crowns.jpg' | url }}" alt="Happy patient with crown-free biomimetic dental work by Dr. Noot in American Fork Utah">
+      </div>
+    </div>
+  </div>
+</section>
+
+{# 3-STEP PLAN SECTION #}
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Keep Your Natural Teeth for Life</h2>
+      <p>Our proven 3-step process preserves your teeth without compromise:</p>
+    </div>
+    
+    <div class="grid grid-3">
+      <div class="card">
+        <div class="step-number">1</div>
+        <h3>Schedule a Consultation</h3>
+        <p>Dr. Noot examines your teeth using advanced microscopy to identify problems early and assess your oral health comprehensively.</p>
+      </div>
+      
+      <div class="card">
+        <div class="step-number">2</div>
+        <h3>Get a Personalized Treatment Plan</h3>
+        <p>Receive a detailed plan that explains exactly what needs to be done and how we'll preserve your natural teeth using biomimetic techniques.</p>
+      </div>
+      
+      <div class="card">
+        <div class="step-number">3</div>
+        <h3>Keep Your Natural Teeth for Life</h3>
+        <p>Through minimally invasive biomimetic dentistry, your teeth are restored to full strength while maintaining their natural integrity.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# SERVICES PREVIEW SECTION #}
+<section class="section section-accent">
+  <div class="container">
+    <div class="section-header">
+      <h2>Advanced Biomimetic Services</h2>
+      <p>Everything you need to preserve your natural teeth:</p>
+    </div>
+    
+    <div class="grid grid-4">
+      {% for service in site.services %}
+      <div class="card">
+        <h3>{{ service.name }}</h3>
+        <p>{{ service.description }}</p>
+        <a href="{{ service.url | url }}" class="btn btn-outline-light">Learn More</a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# TESTIMONIAL STRIP #}
+<section class="section">
+  <div class="container">
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <p>"Dr. Noot has saved at least eight of my natural teeth that other dentists wanted to crown or extract."</p>
+        <cite>— Derek S.</cite>
+      </div>
+      
+      <div class="testimonial-card">
+        <p>"Dr. Noot's technique has saved me from several root canals. His conservative approach preserves my natural teeth."</p>
+        <cite>— Karissa H.</cite>
+      </div>
+      
+      <div class="testimonial-card">
+        <p>"There is no better restorative dentist that I have trained in the last 8 years."</p>
+        <cite>— Dr. David S. Alleman</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# LOCAL SEO SECTION #}
+<section class="section section-light">
+  <div class="container">
+    <div class="section-header">
+      <h2>Serving American Fork & Utah County</h2>
+      <p>Dr. Arnoud Noot is American Fork's premier biomimetic dentist, serving patients throughout Utah County including Lehi, Pleasant Grove, Orem, Provo, Alpine, Highland, Cedar Hills, Saratoga Springs, Eagle Mountain, Lindon, and Vineyard. For over 18 years, Dr. Noot has been the trusted choice for families seeking crown-free, minimally invasive dental care that preserves natural teeth for life.</p>
+    </div>
+  </div>
+</section>
+
+{# FINAL CTA SECTION #}
+<section class="section section-dark">
+  <div class="container">
+    <div class="section-header">
+      <h2>Ready to Save Your Teeth?</h2>
+      <p>Don't let another day pass with dental problems. Dr. Noot's biomimetic approach has helped hundreds of Utah County residents preserve their natural teeth. You're next.</p>
+    </div>
+    
+    <div class="text-center">
+      <a href="{{ '/contact/' | url }}" class="btn btn-accent btn-large">{{ site.cta.text }}</a>
+      <p class="phone-cta">
+        Or call us directly: <a href="tel:{{ site.phone }}" class="phone-link">{{ site.phone }}</a>
+      </p>
+    </div>
+  </div>
+</section>

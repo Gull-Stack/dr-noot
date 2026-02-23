@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title or site.name }} | Dr. Noot Biomimetic Dentist American Fork UT</title>
+  <meta name="description" content="{{ description or site.description }}">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="{{ title }} | {{ site.name }}">
+  <meta property="og:description" content="{{ description or site.description }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:site_name" content="{{ site.name }}">
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ title }} | {{ site.name }}">
+  <meta name="twitter:description" content="{{ description or site.description }}">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="{{ '/favicon.ico' | url }}">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="{{ '/assets/css/styles.css' | url }}">
+  
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dentist",
+    "name": "Dr. Arnoud Noot, DDS - Biomimetic Dentistry",
+    "description": "American Fork's premier biomimetic dentist specializing in crown-free restorations, microscope precision, and minimally invasive care that preserves your natural teeth. Serving Utah County including Lehi, Pleasant Grove, Orem, and Provo.",
+    "url": "{{ site.url }}",
+    "telephone": "{{ site.phone }}",
+    "email": "{{ site.email }}",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "{{ site.address.street }}",
+      "addressLocality": "{{ site.address.city }}",
+      "addressRegion": "{{ site.address.state }}",
+      "postalCode": "{{ site.address.zip }}",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 40.3769,
+      "longitude": -111.7957
+    },
+    "areaServed": [
+      "American Fork",
+      "Lehi", 
+      "Pleasant Grove",
+      "Orem",
+      "Provo",
+      "Alpine",
+      "Highland",
+      "Cedar Hills",
+      "Saratoga Springs",
+      "Eagle Mountain",
+      "Lindon",
+      "Vineyard"
+    ],
+    "priceRange": "$$",
+    "sameAs": ["https://www.facebook.com/DrNoot/"]
+  }
+  </script>
+  
+  <!-- Google Analytics 4 (conditional) -->
+  {% if site.ga4 %}
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.ga4 }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '{{ site.ga4 }}');
+  </script>
+  {% endif %}
+</head>
+<body>
+  {% include "header.njk" %}
+  
+  <main>
+    {{ content | safe }}
+  </main>
+  
+  {% include "footer.njk" %}
+  
+  <script src="{{ '/assets/js/main.js' | url }}"></script>
+</body>
+</html>
