@@ -389,6 +389,29 @@ p {
   border: 1px solid var(--border);
 }
 
+.section-accent .card {
+  background: var(--white);
+}
+
+.section-accent .card h3,
+.section-accent .card h4 {
+  color: var(--text-dark);
+}
+
+.section-accent .card p {
+  color: var(--text-muted);
+}
+
+.section-accent .card .btn {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.section-accent .card .btn:hover {
+  background: var(--primary);
+  color: var(--white);
+}
+
 /* Buttons (Pill-shaped Dipa style) */
 .btn {
   display: inline-flex;
