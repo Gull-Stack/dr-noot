@@ -8,8 +8,5 @@
     "api/*.js": {
       "runtime": "nodejs18.x"
     }
-  },
-  "env": {
-    "SENDGRID_API_KEY": "@sendgrid_api_key"
   }
 }
