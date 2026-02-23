@@ -3,10 +3,5 @@
   "outputDirectory": "_site",
   "installCommand": "npm install",
   "framework": null,
-  "cleanUrls": true,
-  "functions": {
-    "api/*.js": {
-      "runtime": "nodejs18.x"
-    }
-  }
+  "cleanUrls": true
 }
