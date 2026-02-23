@@ -4,18 +4,30 @@ description: "Learn about the traditional tooth lifecycle (filling → crown →
 layout: base.njk
 ---
 
-{# HERO SECTION #}
+{# HERO SECTION - Falling Waters Style #}
 <section class="hero">
+  <div class="hero-bg">
+    <img src="{{ '/assets/images/tooth-lifecycle-comparison.jpg' | url }}" alt="Tooth lifecycle comparison traditional vs biomimetic dentistry American Fork Utah" class="hero-image">
+  </div>
+  <div class="hero-overlay"></div>
   <div class="container">
     <div class="hero-content">
+      <div class="hero-badge">Understanding Dental Treatment</div>
+      
       <h1>The Lifecycle of a Tooth</h1>
+      
       <p class="hero-subtitle">Understanding the traditional path of dental destruction versus the biomimetic approach that preserves your natural teeth for life.</p>
+      
+      <div class="hero-cta">
+        <a href="{{ '/contact/' | url }}" class="btn btn-accent btn-large">Choose Biomimetic Care</a>
+        <a href="#traditional" class="btn btn-outline-light btn-large">See the Difference</a>
+      </div>
     </div>
   </div>
 </section>
 
 {# TRADITIONAL LIFECYCLE SECTION #}
-<section class="section">
+<section class="section" id="traditional">
   <div class="container">
     <div class="section-header">
       <h2>The Traditional Dental Lifecycle</h2>
@@ -87,28 +99,22 @@ layout: base.njk
   <div class="container">
     <div class="content-split">
       <div class="content-text">
+        <div class="section-label">The Problem</div>
         <h2>Why the Traditional Approach Fails</h2>
         <p>The traditional dental lifecycle is designed to fail because it doesn't address the root causes of dental problems:</p>
         
-        <div class="problem-list">
-          <div class="problem-item">
-            <h4>All Crowns Eventually Leak</h4>
-            <p>No crown can seal perfectly. Bacteria inevitably gets underneath, creating an environment impossible to clean.</p>
+        <div class="benefit-list">
+          <div class="benefit-item">
+            <strong>All Crowns Eventually Leak</strong> — No crown can seal perfectly. Bacteria inevitably gets underneath, creating an environment impossible to clean.
           </div>
-          
-          <div class="problem-item">
-            <h4>Each Step Weakens the Tooth</h4>
-            <p>Every traditional treatment removes more healthy tooth structure, making the tooth progressively weaker.</p>
+          <div class="benefit-item">
+            <strong>Each Step Weakens the Tooth</strong> — Every traditional treatment removes more healthy tooth structure, making the tooth progressively weaker.
           </div>
-          
-          <div class="problem-item">
-            <h4>Root Canals Don't Last</h4>
-            <p>Root canals make teeth brittle and prone to fracture. Most root canal teeth are eventually lost.</p>
+          <div class="benefit-item">
+            <strong>Root Canals Don't Last</strong> — Root canals make teeth brittle and prone to fracture. Most root canal teeth are eventually lost.
           </div>
-          
-          <div class="problem-item">
-            <h4>It's Profitable to Fail</h4>
-            <p>Traditional dentistry makes more money when treatments fail and need replacement. There's little incentive for long-term solutions.</p>
+          <div class="benefit-item">
+            <strong>It's Profitable to Fail</strong> — Traditional dentistry makes more money when treatments fail and need replacement.
           </div>
         </div>
       </div>
@@ -172,7 +178,7 @@ layout: base.njk
   </div>
 </section>
 
-{# KEY DIFFERENCES SECTION #}
+{# KEY DIFFERENCES SECTION - Clean cards without emoji icons #}
 <section class="section section-light">
   <div class="container">
     <div class="section-header">
@@ -181,38 +187,32 @@ layout: base.njk
     </div>
     
     <div class="grid grid-3">
-      <div class="advantage-card">
-        <div class="advantage-icon">🔬</div>
+      <div class="card">
         <h3>Microscope Precision</h3>
         <p>Every procedure uses microscopy for precise removal of only diseased tissue, preserving all healthy tooth structure.</p>
       </div>
       
-      <div class="advantage-card">
-        <div class="advantage-icon">🧪</div>
+      <div class="card">
         <h3>Biomimetic Materials</h3>
         <p>Advanced materials that chemically bond with tooth structure, creating a seamless restoration that mimics natural tooth properties.</p>
       </div>
       
-      <div class="advantage-card">
-        <div class="advantage-icon">🛡️</div>
+      <div class="card">
         <h3>No Crown Leakage</h3>
         <p>Biomimetic restorations seal perfectly with your tooth, eliminating the bacterial leakage that destroys crowned teeth.</p>
       </div>
       
-      <div class="advantage-card">
-        <div class="advantage-icon">💪</div>
+      <div class="card">
         <h3>Preserves Strength</h3>
         <p>By maintaining natural tooth structure, biomimetic teeth remain strong and flexible, lasting your entire lifetime.</p>
       </div>
       
-      <div class="advantage-card">
-        <div class="advantage-icon">⚡</div>
+      <div class="card">
         <h3>Prevents Problems</h3>
         <p>Advanced diagnostics and conservative treatment prevent minor issues from becoming major problems.</p>
       </div>
       
-      <div class="advantage-card">
-        <div class="advantage-icon">🎯</div>
+      <div class="card">
         <h3>One-Time Treatment</h3>
         <p>Well-executed biomimetic restorations don't need replacement, ending the cycle of dental destruction.</p>
       </div>
@@ -225,6 +225,7 @@ layout: base.njk
   <div class="container">
     <div class="section-header">
       <h2>Traditional vs. Biomimetic: Side by Side</h2>
+      <p>A clear comparison of the two approaches:</p>
     </div>
     
     <div class="comparison-table">
@@ -286,26 +287,50 @@ layout: base.njk
       <p>See how the biomimetic approach has changed patient outcomes:</p>
     </div>
     
-    <div class="patient-examples">
-      <div class="example-card">
+    <div class="grid grid-3">
+      <div class="card">
         <h3>Derek S. - 8 Teeth Saved</h3>
         <p><strong>Traditional Recommendation:</strong> 8 crowns or extractions</p>
         <p><strong>Dr. Noot's Approach:</strong> Biomimetic restorations preserved all 8 natural teeth</p>
         <p><strong>Result:</strong> Patient keeps all natural teeth with no crowns needed</p>
       </div>
       
-      <div class="example-card">
+      <div class="card">
         <h3>Karissa H. - Root Canals Avoided</h3>
         <p><strong>Traditional Path:</strong> Multiple teeth headed for root canal treatment</p>
         <p><strong>Dr. Noot's Approach:</strong> Conservative biomimetic restorations</p>
         <p><strong>Result:</strong> All teeth remain vital and healthy</p>
       </div>
       
-      <div class="example-card">
+      <div class="card">
         <h3>Donald T.'s Son - Microscope Precision</h3>
         <p><strong>Traditional Option:</strong> Crown on young patient's tooth</p>
         <p><strong>Dr. Noot's Approach:</strong> Precise onlay under microscope</p>
         <p><strong>Result:</strong> Natural tooth preserved for lifetime</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# AWARDS SECTION - Trust badges #}
+<section class="awards">
+  <div class="container">
+    <div class="awards-grid">
+      <div class="award-item">
+        <div class="award-badge">0</div>
+        <p>Crowns Placed in 18+ Years</p>
+      </div>
+      <div class="award-item">
+        <div class="award-badge">100%</div>
+        <p>Academy Certified</p>
+      </div>
+      <div class="award-item">
+        <div class="award-badge">90%+</div>
+        <p>Success Rate</p>
+      </div>
+      <div class="award-item">
+        <div class="award-badge">1x</div>
+        <p>Treatment Needed</p>
       </div>
     </div>
   </div>

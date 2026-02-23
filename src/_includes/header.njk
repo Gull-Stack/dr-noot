@@ -1,7 +1,7 @@
 <header class="header">
-  <div class="container">
-    <nav class="nav">
-      <!-- Logo (text-based) -->
+  <nav class="nav">
+    <div class="nav-container">
+      <!-- Logo (text-based serif like Falling Waters) -->
       <a href="{{ '/' | url }}" class="nav-logo">
         Dr. Noot
       </a>
@@ -22,9 +22,19 @@
         <!-- Phone CTA -->
         <li><a href="tel:{{ site.phone }}" class="nav-phone">{{ site.phone }}</a></li>
         
-        <!-- Primary CTA button -->
-        <li><a href="{{ site.cta.url | url }}" class="btn btn-primary">{{ site.cta.text }}</a></li>
+        <!-- Primary CTA button (pill-shaped like Falling Waters) -->
+        <li><a href="{{ site.cta.url | url }}" class="btn nav-cta">{{ site.cta.text }}</a></li>
       </ul>
-    </nav>
-  </div>
+    </div>
+  </nav>
 </header>
+
+<!-- Mobile Menu Overlay -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="{{ '/' | url }}">Home</a>
+  {% for item in site.nav %}
+  <a href="{{ item.url | url }}">{{ item.label }}</a>
+  {% endfor %}
+  <a href="tel:{{ site.phone }}" class="nav-phone">{{ site.phone }}</a>
+  <a href="{{ site.cta.url | url }}" class="btn btn-accent">{{ site.cta.text }}</a>
+</div>

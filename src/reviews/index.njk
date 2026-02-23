@@ -4,12 +4,24 @@ description: "Real patient testimonials about Dr. Noot's biomimetic dentistry in
 layout: base.njk
 ---
 
-{# HERO SECTION #}
+{# HERO SECTION - Falling Waters Style #}
 <section class="hero">
+  <div class="hero-bg">
+    <img src="{{ '/assets/images/happy-patients-american-fork.jpg' | url }}" alt="Happy dental patients Dr. Noot American Fork Utah" class="hero-image">
+  </div>
+  <div class="hero-overlay"></div>
   <div class="container">
     <div class="hero-content">
-      <h1>Real Patient Stories</h1>
+      <div class="hero-badge">Real Patient Experiences</div>
+      
+      <h1>Patient Stories & Reviews</h1>
+      
       <p class="hero-subtitle">Discover how Dr. Noot's biomimetic approach has saved natural teeth and transformed lives throughout American Fork and Utah County.</p>
+      
+      <div class="hero-cta">
+        <a href="{{ '/contact/' | url }}" class="btn btn-accent btn-large">Join Our Happy Patients</a>
+        <a href="#testimonials" class="btn btn-outline-light btn-large">Read Reviews</a>
+      </div>
     </div>
   </div>
 </section>
@@ -19,20 +31,20 @@ layout: base.njk
   <div class="container">
     <div class="featured-testimonial">
       <div class="testimonial-content">
-        <blockquote class="testimonial-quote">
+        <div class="testimonial-quote">
           "There is no better restorative dentist that I have trained in the last 8 years."
-        </blockquote>
-        <cite class="testimonial-author">
+        </div>
+        <div class="testimonial-author">
           <strong>Dr. David S. Alleman</strong><br>
           Founder, Academy of Biomimetic Dentistry
-        </cite>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-{# PATIENT TESTIMONIALS GRID #}
-<section class="section">
+{# PATIENT TESTIMONIALS GRID - Falling Waters Style #}
+<section class="testimonials" id="testimonials">
   <div class="container">
     <div class="section-header">
       <h2>What Our Patients Say</h2>
@@ -41,95 +53,77 @@ layout: base.njk
     
     <div class="testimonial-grid">
       <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
         <div class="testimonial-text">
           <p>"Dr. Noot has saved at least eight of my natural teeth that other dentists wanted to crown or extract. His conservative approach means I still have all my teeth!"</p>
         </div>
-        <div class="testimonial-author">
-          <strong>Derek S.</strong><br>
-          <span class="author-detail">Long-time Patient</span>
-        </div>
+        <div class="testimonial-author">Derek S., Pleasant Grove</div>
       </div>
       
       <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
         <div class="testimonial-text">
           <p>"Dr. Noot always finds opportunities to educate me on what he's doing. I never leave confused about my treatment. He takes the time to explain everything clearly."</p>
         </div>
-        <div class="testimonial-author">
-          <strong>Therese T.</strong><br>
-          <span class="author-detail">American Fork Resident</span>
-        </div>
+        <div class="testimonial-author">Therese T., American Fork</div>
       </div>
       
       <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
         <div class="testimonial-text">
           <p>"I feel that Dr. Noot goes out of his way to provide the best quality dental treatment possible at very reasonable cost. His work is exceptional."</p>
         </div>
-        <div class="testimonial-author">
-          <strong>Mike C.</strong><br>
-          <span class="author-detail">Utah County Patient</span>
-        </div>
+        <div class="testimonial-author">Mike C., Utah County</div>
       </div>
       
       <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
         <div class="testimonial-text">
           <p>"Dr. Noot's technique has saved me from several root canals. Instead of destroying my teeth with crowns, he preserved them with biomimetic restorations."</p>
         </div>
-        <div class="testimonial-author">
-          <strong>Karissa H.</strong><br>
-          <span class="author-detail">Pleasant Grove Resident</span>
-        </div>
+        <div class="testimonial-author">Karissa H., Lehi</div>
       </div>
       
       <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
         <div class="testimonial-text">
           <p>"Dr. Noot did an onlay and saved my son's tooth. He did all of this under a microscope while I watched on a television screen! Amazing precision."</p>
         </div>
-        <div class="testimonial-author">
-          <strong>Donald T.</strong><br>
-          <span class="author-detail">Parent of Patient</span>
-        </div>
+        <div class="testimonial-author">Donald T., Highland</div>
       </div>
       
-      <div class="testimonial-card highlight">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
         <div class="testimonial-text">
           <p>"After 18 years of going to Dr. Noot, I can honestly say he's the most caring and skilled dentist I've ever experienced. He truly cares about preserving your natural teeth."</p>
         </div>
-        <div class="testimonial-author">
-          <strong>Sarah M.</strong><br>
-          <span class="author-detail">18-Year Patient</span>
-        </div>
+        <div class="testimonial-author">Sarah M., Cedar Hills</div>
       </div>
     </div>
   </div>
 </section>
 
 {# RESULTS SECTION #}
-<section class="section section-light">
+<section class="section">
   <div class="container">
     <div class="content-split">
       <div class="content-text">
-        <h2>Real Results from Biomimetic Dentistry</h2>
+        <div class="section-label">Real Results</div>
+        <h2>What Biomimetic Dentistry Achieves</h2>
         <p>These stories represent what's possible when you choose a dentist committed to preserving your natural teeth:</p>
         
-        <div class="results-list">
-          <div class="result-item">
-            <h3>Teeth Saved from Extraction</h3>
-            <p>Patients like Derek S. have kept natural teeth that other dentists wanted to remove, avoiding the need for implants or partial dentures.</p>
+        <div class="benefit-list">
+          <div class="benefit-item">
+            <strong>Teeth Saved from Extraction</strong> — Patients like Derek S. have kept natural teeth that other dentists wanted to remove
           </div>
-          
-          <div class="result-item">
-            <h3>Root Canals Avoided</h3>
-            <p>Through early intervention and biomimetic techniques, many patients have avoided root canal procedures and maintained healthy, living teeth.</p>
+          <div class="benefit-item">
+            <strong>Root Canals Avoided</strong> — Early intervention and biomimetic techniques prevent the need for root canal procedures
           </div>
-          
-          <div class="result-item">
-            <h3>Crown-Free Restorations</h3>
-            <p>Instead of destructive crowns that eventually fail, patients receive seamless biomimetic restorations that preserve natural tooth structure.</p>
+          <div class="benefit-item">
+            <strong>Crown-Free Restorations</strong> — Seamless biomimetic restorations preserve natural tooth structure instead of destroying it
           </div>
-          
-          <div class="result-item">
-            <h3>Long-Term Oral Health</h3>
-            <p>Patients with Dr. Noot for 10+ years maintain excellent oral health without the cycle of failed restorations common in traditional dentistry.</p>
+          <div class="benefit-item">
+            <strong>Long-Term Oral Health</strong> — Patients maintain excellent oral health without the cycle of failed restorations
           </div>
         </div>
       </div>
@@ -141,8 +135,8 @@ layout: base.njk
   </div>
 </section>
 
-{# EXPERIENCE HIGHLIGHTS #}
-<section class="section">
+{# EXPERIENCE HIGHLIGHTS - Cards without emoji icons #}
+<section class="section section-light">
   <div class="container">
     <div class="section-header">
       <h2>The Dr. Noot Experience</h2>
@@ -150,104 +144,111 @@ layout: base.njk
     </div>
     
     <div class="grid grid-3">
-      <div class="experience-card">
-        <div class="experience-icon">⏰</div>
+      <div class="card">
         <h3>Unhurried Care</h3>
-        <p>"Dr. Noot doesn't overbook his schedule. Each appointment feels relaxed and thorough."</p>
+        <p>"Dr. Noot doesn't overbook his schedule. Each appointment feels relaxed and thorough, never rushed."</p>
       </div>
       
-      <div class="experience-card">
-        <div class="experience-icon">🎓</div>
+      <div class="card">
         <h3>Patient Education</h3>
-        <p>"He explains everything clearly and shows you exactly what's happening using the microscope."</p>
+        <p>"He explains everything clearly and shows you exactly what's happening using the microscope and TV screen."</p>
       </div>
       
-      <div class="experience-card">
-        <div class="experience-icon">🔬</div>
+      <div class="card">
         <h3>Microscope Precision</h3>
-        <p>"Watching your treatment on screen is fascinating. You can see the incredible precision."</p>
+        <p>"Watching your treatment on screen is fascinating. You can see the incredible precision of biomimetic dentistry."</p>
       </div>
       
-      <div class="experience-card">
-        <div class="experience-icon">🤝</div>
+      <div class="card">
         <h3>Conservative Approach</h3>
-        <p>"Dr. Noot always looks for the most conservative solution that preserves your natural teeth."</p>
+        <p>"Dr. Noot always looks for the most conservative solution that preserves your natural teeth first."</p>
       </div>
       
-      <div class="experience-card">
-        <div class="experience-icon">💰</div>
+      <div class="card">
         <h3>Fair Pricing</h3>
-        <p>"High-quality biomimetic dentistry at reasonable prices. No unnecessary treatments."</p>
+        <p>"High-quality biomimetic dentistry at reasonable prices. No unnecessary treatments or overselling."</p>
       </div>
       
-      <div class="experience-card">
-        <div class="experience-icon">❤️</div>
+      <div class="card">
         <h3>Genuine Care</h3>
-        <p>"You can tell Dr. Noot truly cares about your long-term oral health and well-being."</p>
+        <p>"You can tell Dr. Noot truly cares about your long-term oral health and overall well-being."</p>
       </div>
     </div>
   </div>
 </section>
 
-{# BEFORE AND AFTER CONCEPT #}
-<section class="section section-light">
+{# COMPARISON SECTION #}
+<section class="section">
   <div class="container">
     <div class="section-header">
       <h2>Traditional Dentistry vs. Biomimetic Dentistry</h2>
       <p>See the difference in patient experiences:</p>
     </div>
     
-    <div class="comparison-grid">
-      <div class="comparison-column">
-        <h3 class="comparison-header traditional">Traditional Approach</h3>
-        <div class="comparison-list">
-          <div class="comparison-item">
-            <span class="comparison-icon">❌</span>
-            <p>"They wanted to crown my tooth"</p>
+    <div class="content-split">
+      <div>
+        <h3 style="color: #e74c3c; margin-bottom: 1.5rem;">Traditional Approach</h3>
+        <div class="benefit-list">
+          <div class="benefit-item" style="border-color: rgba(231, 76, 60, 0.2);">
+            <strong style="color: #e74c3c;">Crown placement</strong> — "They wanted to crown my tooth and remove healthy structure"
           </div>
-          <div class="comparison-item">
-            <span class="comparison-icon">❌</span>
-            <p>"Root canal was the only option"</p>
+          <div class="benefit-item" style="border-color: rgba(231, 76, 60, 0.2);">
+            <strong style="color: #e74c3c;">Root canal necessity</strong> — "Root canal was the only option they offered"
           </div>
-          <div class="comparison-item">
-            <span class="comparison-icon">❌</span>
-            <p>"Rush through appointments"</p>
+          <div class="benefit-item" style="border-color: rgba(231, 76, 60, 0.2);">
+            <strong style="color: #e74c3c;">Rushed appointments</strong> — "Rush through appointments without explanation"
           </div>
-          <div class="comparison-item">
-            <span class="comparison-icon">❌</span>
-            <p>"Little explanation of treatment"</p>
-          </div>
-          <div class="comparison-item">
-            <span class="comparison-icon">❌</span>
-            <p>"Tooth extraction recommended"</p>
+          <div class="benefit-item" style="border-color: rgba(231, 76, 60, 0.2);">
+            <strong style="color: #e74c3c;">Tooth extraction</strong> — "Extraction recommended instead of preservation"
           </div>
         </div>
       </div>
       
-      <div class="comparison-column">
-        <h3 class="comparison-header biomimetic">Dr. Noot's Approach</h3>
-        <div class="comparison-list">
-          <div class="comparison-item">
-            <span class="comparison-icon">✅</span>
-            <p>"Saved my tooth with an onlay"</p>
+      <div>
+        <h3 style="color: var(--color-accent); margin-bottom: 1.5rem;">Dr. Noot's Approach</h3>
+        <div class="benefit-list">
+          <div class="benefit-item">
+            <strong>Crown-free restoration</strong> — "Saved my tooth with a precision onlay instead"
           </div>
-          <div class="comparison-item">
-            <span class="comparison-icon">✅</span>
-            <p>"Avoided root canal completely"</p>
+          <div class="benefit-item">
+            <strong>Root canal avoided</strong> — "Avoided root canal completely with biomimetic techniques"
           </div>
-          <div class="comparison-item">
-            <span class="comparison-icon">✅</span>
-            <p>"Takes time with each patient"</p>
+          <div class="benefit-item">
+            <strong>Adequate time</strong> — "Takes time with each patient, never feels rushed"
           </div>
-          <div class="comparison-item">
-            <span class="comparison-icon">✅</span>
-            <p>"Explains everything clearly"</p>
-          </div>
-          <div class="comparison-item">
-            <span class="comparison-icon">✅</span>
-            <p>"Preserved my natural tooth"</p>
+          <div class="benefit-item">
+            <strong>Natural tooth preserved</strong> — "Preserved my natural tooth with advanced methods"
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# AWARDS SECTION - Trust badges #}
+<section class="awards">
+  <div class="container">
+    <div class="section-header">
+      <h2>Patient Trust & Recognition</h2>
+      <p>The results speak for themselves:</p>
+    </div>
+    
+    <div class="awards-grid">
+      <div class="award-item">
+        <div class="award-badge">5★</div>
+        <p>Patient Rating</p>
+      </div>
+      <div class="award-item">
+        <div class="award-badge">18+</div>
+        <p>Years Serving American Fork</p>
+      </div>
+      <div class="award-item">
+        <div class="award-badge">0</div>
+        <p>Crowns Placed</p>
+      </div>
+      <div class="award-item">
+        <div class="award-badge">100%</div>
+        <p>Academy Certified</p>
       </div>
     </div>
   </div>

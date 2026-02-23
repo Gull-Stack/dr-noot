@@ -1,6 +1,6 @@
 /**
- * GullStack Client Starter - JavaScript
- * Handles mobile menu, smooth scrolling, and form submission with spam protection
+ * Dr. Noot Biomimetic Dentistry - JavaScript
+ * Handles mobile menu, FAQ accordion, smooth scrolling, and form submission
  */
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -9,6 +9,9 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Mobile menu functionality
   initializeMobileMenu();
+  
+  // FAQ accordion functionality
+  initializeFAQAccordion();
   
   // Contact form submission
   initializeContactForm();
@@ -32,48 +35,114 @@ function initializeTimestamp() {
 }
 
 /**
- * Mobile hamburger menu toggle
+ * Mobile hamburger menu toggle - Updated for new nav structure
  */
 function initializeMobileMenu() {
-  const mobileToggle = document.querySelector('.mobile-toggle');
-  const navLinks = document.querySelector('.nav-links');
+  const navToggle = document.querySelector('.nav-toggle');
+  const mobileMenu = document.getElementById('mobileMenu');
   
-  if (mobileToggle && navLinks) {
-    mobileToggle.addEventListener('click', function() {
-      const isActive = navLinks.classList.contains('active');
+  if (navToggle && mobileMenu) {
+    navToggle.addEventListener('click', function() {
+      const isActive = mobileMenu.classList.contains('active');
       
       // Toggle menu
-      navLinks.classList.toggle('active');
-      mobileToggle.classList.toggle('active');
+      mobileMenu.classList.toggle('active');
+      navToggle.classList.toggle('active');
       
       // Update aria-expanded for accessibility
-      mobileToggle.setAttribute('aria-expanded', !isActive);
+      navToggle.setAttribute('aria-expanded', !isActive);
       
       // Prevent body scroll when menu is open
       document.body.style.overflow = isActive ? 'auto' : 'hidden';
+      
+      // Animate hamburger bars
+      const spans = navToggle.querySelectorAll('span');
+      spans.forEach((span, index) => {
+        if (!isActive) {
+          // Open state
+          if (index === 0) span.style.transform = 'rotate(45deg) translate(6px, 6px)';
+          if (index === 1) span.style.opacity = '0';
+          if (index === 2) span.style.transform = 'rotate(-45deg) translate(6px, -6px)';
+        } else {
+          // Closed state
+          span.style.transform = 'none';
+          span.style.opacity = '1';
+        }
+      });
     });
     
     // Close menu when clicking on nav links
-    const navLinkItems = navLinks.querySelectorAll('a');
-    navLinkItems.forEach(link => {
+    const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+    mobileMenuLinks.forEach(link => {
       link.addEventListener('click', function() {
-        navLinks.classList.remove('active');
-        mobileToggle.classList.remove('active');
-        mobileToggle.setAttribute('aria-expanded', 'false');
+        mobileMenu.classList.remove('active');
+        navToggle.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
         document.body.style.overflow = 'auto';
+        
+        // Reset hamburger bars
+        const spans = navToggle.querySelectorAll('span');
+        spans.forEach(span => {
+          span.style.transform = 'none';
+          span.style.opacity = '1';
+        });
       });
     });
     
     // Close menu when clicking outside
     document.addEventListener('click', function(e) {
-      if (!mobileToggle.contains(e.target) && !navLinks.contains(e.target)) {
-        navLinks.classList.remove('active');
-        mobileToggle.classList.remove('active');
-        mobileToggle.setAttribute('aria-expanded', 'false');
+      if (!navToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
+        mobileMenu.classList.remove('active');
+        navToggle.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
         document.body.style.overflow = 'auto';
+        
+        // Reset hamburger bars
+        const spans = navToggle.querySelectorAll('span');
+        spans.forEach(span => {
+          span.style.transform = 'none';
+          span.style.opacity = '1';
+        });
       }
     });
   }
+}
+
+/**
+ * FAQ Accordion Functionality - New for Falling Waters style
+ */
+function initializeFAQAccordion() {
+  const faqItems = document.querySelectorAll('.faq-item');
+  
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    const answer = item.querySelector('.faq-answer');
+    const toggle = item.querySelector('.faq-toggle');
+    
+    if (question && answer && toggle) {
+      question.addEventListener('click', function() {
+        const isActive = item.classList.contains('active');
+        
+        // Close all other FAQ items
+        faqItems.forEach(otherItem => {
+          if (otherItem !== item) {
+            otherItem.classList.remove('active');
+            const otherToggle = otherItem.querySelector('.faq-toggle');
+            if (otherToggle) otherToggle.textContent = '+';
+          }
+        });
+        
+        // Toggle current item
+        if (isActive) {
+          item.classList.remove('active');
+          toggle.textContent = '+';
+        } else {
+          item.classList.add('active');
+          toggle.textContent = '×';
+        }
+      });
+    }
+  });
 }
 
 /**
@@ -224,7 +293,7 @@ function initializeSmoothScrolling() {
         e.preventDefault();
         
         // Account for fixed header
-        const headerHeight = document.querySelector('.header')?.offsetHeight || 0;
+        const headerHeight = document.querySelector('.nav')?.offsetHeight || 80;
         const targetPosition = target.offsetTop - headerHeight - 20;
         
         window.scrollTo({
@@ -240,7 +309,7 @@ function initializeSmoothScrolling() {
  * Fade-in animation on scroll (optional enhancement)
  */
 function initializeFadeInAnimation() {
-  const fadeElements = document.querySelectorAll('.fade-in');
+  const fadeElements = document.querySelectorAll('.fade-in-up');
   
   if (fadeElements.length === 0) return;
   
@@ -263,6 +332,24 @@ function initializeFadeInAnimation() {
     element.style.animationPlayState = 'paused';
     observer.observe(element);
   });
+}
+
+/**
+ * Scroll-based navigation background
+ */
+function initializeNavScroll() {
+  const nav = document.querySelector('.nav');
+  if (!nav) return;
+  
+  const handleScroll = throttle(() => {
+    if (window.scrollY > 100) {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
+  }, 10);
+  
+  window.addEventListener('scroll', handleScroll);
 }
 
 /**

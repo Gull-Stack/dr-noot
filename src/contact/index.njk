@@ -4,12 +4,24 @@ description: "Contact Dr. Noot's biomimetic dentistry practice in American Fork,
 layout: base.njk
 ---
 
-{# HERO SECTION #}
+{# HERO SECTION - Falling Waters Style #}
 <section class="hero">
+  <div class="hero-bg">
+    <img src="{{ '/assets/images/noot-office-exterior.jpg' | url }}" alt="Dr. Noot biomimetic dentistry office American Fork Utah" class="hero-image">
+  </div>
+  <div class="hero-overlay"></div>
   <div class="container">
     <div class="hero-content">
+      <div class="hero-badge">American Fork's Premier Practice</div>
+      
       <h1>Schedule Your Visit</h1>
+      
       <p class="hero-subtitle">Ready to experience biomimetic dentistry? Contact Dr. Noot's office in American Fork to schedule your consultation and discover how to save your natural teeth for life.</p>
+      
+      <div class="hero-cta">
+        <a href="tel:{{ site.phone }}" class="btn btn-accent btn-large">Call {{ site.phone }}</a>
+        <a href="#contactForm" class="btn btn-outline-light btn-large">Send a Message</a>
+      </div>
     </div>
   </div>
 </section>
@@ -17,11 +29,12 @@ layout: base.njk
 {# MAIN CONTACT SECTION #}
 <section class="section">
   <div class="container">
-    <div class="grid grid-2">
+    <div class="content-split">
       <!-- Contact Form -->
       <div>
+        <div class="section-label">Get In Touch</div>
         <h2>Send Us a Message</h2>
-        <p>Fill out the form below and we'll get back to you promptly to schedule your appointment.</p>
+        <p>Fill out the form below and we'll get back to you promptly to schedule your appointment and answer any questions about biomimetic dentistry.</p>
         
         {% include "form.njk" %}
       </div>
@@ -32,20 +45,20 @@ layout: base.njk
         <div class="card">
           <h3>Contact Information</h3>
           
-          <div style="margin-bottom: 1.5rem;">
-            <h4>📞 Call Our Office</h4>
+          <div style="margin-bottom: 2rem;">
+            <h4>Call Our Office</h4>
             <p><a href="tel:{{ site.phone }}" class="text-primary" style="font-size: 1.25rem; font-weight: 600;">{{ site.phone }}</a></p>
             <p><small>Monday-Thursday 8:00 AM - 5:00 PM</small></p>
           </div>
           
-          <div style="margin-bottom: 1.5rem;">
-            <h4>📧 Email Us</h4>
+          <div style="margin-bottom: 2rem;">
+            <h4>Email Us</h4>
             <p><a href="mailto:{{ site.email }}" class="text-primary">{{ site.email }}</a></p>
             <p><small>We respond to all emails promptly</small></p>
           </div>
           
-          <div style="margin-bottom: 1.5rem;">
-            <h4>📍 Our Location</h4>
+          <div style="margin-bottom: 2rem;">
+            <h4>Our Location</h4>
             <p>
               {{ site.address.street }}<br>
               {{ site.address.city }}, {{ site.address.state }} {{ site.address.zip }}
@@ -54,75 +67,95 @@ layout: base.njk
           </div>
         </div>
         
-        <!-- Map -->
-        <div class="card">
-          <h3>Find Us</h3>
-          <div class="map-container">
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3048.8746!2d-111.7957!3d40.3769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDIyJzM2LjgiTiAxMTHCsDQ3JzQ0LjUiVw!5e0!3m2!1sen!2sus!4v1635000000000!5m2!1sen!2sus" 
-              width="100%" 
-              height="250" 
-              style="border:0; border-radius: 8px;" 
-              allowfullscreen="" 
-              loading="lazy" 
-              referrerpolicy="no-referrer-when-downgrade"
-              title="Dr. Noot Biomimetic Dentistry location in American Fork Utah">
-            </iframe>
-          </div>
-        </div>
-        
         <!-- What to Expect -->
         <div class="card">
           <h3>What to Expect at Your First Visit</h3>
-          <ol>
-            <li><strong>Comprehensive Examination</strong> — Dr. Noot uses microscopy to thoroughly assess your oral health</li>
-            <li><strong>Personalized Treatment Discussion</strong> — Learn about biomimetic options specific to your needs</li>
-            <li><strong>Conservative, Tooth-Saving Care</strong> — Experience the biomimetic difference that preserves your natural teeth</li>
-          </ol>
+          <div class="benefit-list">
+            <div class="benefit-item">
+              <strong>Comprehensive Examination</strong> — Dr. Noot uses microscopy to thoroughly assess your oral health
+            </div>
+            <div class="benefit-item">
+              <strong>Personalized Treatment Discussion</strong> — Learn about biomimetic options specific to your needs
+            </div>
+            <div class="benefit-item">
+              <strong>Conservative, Tooth-Saving Care</strong> — Experience the biomimetic difference that preserves your natural teeth
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-{# OFFICE HOURS SECTION #}
+{# MAP SECTION - Separate full-width section #}
 <section class="section section-light">
   <div class="container">
     <div class="section-header">
-      <h2>Office Hours & Policies</h2>
-      <p>We're here to serve you with convenient scheduling and flexible options:</p>
+      <h2>Find Us in American Fork</h2>
+      <p>Conveniently located with easy access from I-15 and local highways throughout Utah County.</p>
     </div>
     
-    <div class="grid grid-2">
+    <div class="contact-map">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3048.8746!2d-111.7957!3d40.3769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDIyJzM2LjgiTiAxMTHCsDQ3JzQ0LjUiVw!5e0!3m2!1sen!2sus!4v1635000000000!5m2!1sen!2sus" 
+        width="100%" 
+        height="400" 
+        style="border:0; border-radius: 15px;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Dr. Noot Biomimetic Dentistry location in American Fork Utah">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+{# OFFICE HOURS SECTION #}
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Office Hours & Policies</h2>
+      <p>We're here to serve you with convenient scheduling and personalized care:</p>
+    </div>
+    
+    <div class="content-split">
       <div class="card">
         <h3>Office Hours</h3>
         <ul class="office-hours">
-          <li><strong>Monday:</strong> 8:00 AM - 5:00 PM</li>
-          <li><strong>Tuesday:</strong> 8:00 AM - 5:00 PM</li>
-          <li><strong>Wednesday:</strong> 8:00 AM - 5:00 PM</li>
-          <li><strong>Thursday:</strong> 8:00 AM - 5:00 PM</li>
-          <li><strong>Friday:</strong> Closed</li>
-          <li><strong>Saturday:</strong> Closed</li>
-          <li><strong>Sunday:</strong> Closed</li>
+          <li><strong>Monday:</strong> <span>8:00 AM - 5:00 PM</span></li>
+          <li><strong>Tuesday:</strong> <span>8:00 AM - 5:00 PM</span></li>
+          <li><strong>Wednesday:</strong> <span>8:00 AM - 5:00 PM</span></li>
+          <li><strong>Thursday:</strong> <span>8:00 AM - 5:00 PM</span></li>
+          <li><strong>Friday:</strong> <span>Closed</span></li>
+          <li><strong>Saturday:</strong> <span>Closed</span></li>
+          <li><strong>Sunday:</strong> <span>Closed</span></li>
         </ul>
-        <p><small>*Emergency appointments available by arrangement</small></p>
+        <p><small>Emergency appointments available by arrangement</small></p>
       </div>
       
-      <div class="card">
-        <h3>Our Policies</h3>
-        <ul>
-          <li>✅ <strong>Personalized attention:</strong> Dr. Noot doesn't overbook his schedule</li>
-          <li>✅ <strong>Thorough consultations:</strong> Every patient receives adequate time</li>
-          <li>✅ <strong>Conservative treatment:</strong> We preserve your natural teeth whenever possible</li>
-          <li>✅ <strong>Patient education:</strong> You'll understand every aspect of your treatment</li>
-        </ul>
+      <div>
+        <h3>Our Commitment to Excellence</h3>
+        <div class="benefit-list">
+          <div class="benefit-item">
+            <strong>Personalized attention</strong> — Dr. Noot doesn't overbook his schedule
+          </div>
+          <div class="benefit-item">
+            <strong>Thorough consultations</strong> — Every patient receives adequate time
+          </div>
+          <div class="benefit-item">
+            <strong>Conservative treatment</strong> — We preserve your natural teeth whenever possible
+          </div>
+          <div class="benefit-item">
+            <strong>Patient education</strong> — You'll understand every aspect of your treatment
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 {# AREAS SERVED SECTION #}
-<section class="section">
+<section class="section section-cream">
   <div class="container">
     <div class="section-header">
       <h2>Serving Utah County</h2>
@@ -149,61 +182,97 @@ layout: base.njk
   </div>
 </section>
 
-{# FAQ SECTION #}
-<section class="section section-light">
+{# FAQ SECTION - Accordion Style #}
+<section class="faq">
   <div class="container">
     <div class="section-header">
       <h2>Frequently Asked Questions</h2>
-      <p>Common questions about biomimetic dentistry and Dr. Noot's practice:</p>
+      <p>Common questions about scheduling and biomimetic dentistry:</p>
     </div>
     
-    <div class="grid grid-2">
-      <div>
-        <h4>What is biomimetic dentistry?</h4>
-        <p>Biomimetic dentistry mimics the natural properties of teeth using advanced materials and techniques. It preserves your natural tooth structure instead of destroying it like traditional crowns.</p>
-        
-        <h4>Does Dr. Noot accept insurance?</h4>
-        <p>We work with most dental insurance plans. Our office will help verify your benefits and maximize your coverage for biomimetic treatments.</p>
-        
-        <h4>How long do biomimetic restorations last?</h4>
-        <p>When properly executed, biomimetic restorations can last your entire lifetime because they preserve and strengthen your natural tooth structure.</p>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question">
+          What should I bring to my first appointment?
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-content">
+            <p>Please bring your insurance card, a valid ID, and any recent dental X-rays or records from your previous dentist. This helps Dr. Noot provide the most comprehensive assessment of your oral health.</p>
+          </div>
+        </div>
       </div>
       
-      <div>
-        <h4>Are biomimetic treatments painful?</h4>
-        <p>Dr. Noot's advanced techniques often eliminate the need for needles and drills, making treatment much more comfortable than traditional dentistry.</p>
-        
-        <h4>How is this different from regular dental work?</h4>
-        <p>Traditional dentistry removes healthy tooth structure to fit crowns. Biomimetic dentistry preserves healthy structure and creates restorations that strengthen your natural teeth.</p>
-        
-        <h4>Do you treat dental emergencies?</h4>
-        <p>Yes, Dr. Noot provides emergency dental care for patients. Call our office and we'll arrange prompt treatment to address your urgent dental needs.</p>
+      <div class="faq-item">
+        <button class="faq-question">
+          Does Dr. Noot accept dental insurance?
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-content">
+            <p>We work with most dental insurance plans. Our office will help verify your benefits and maximize your coverage for biomimetic treatments. We'll handle the insurance paperwork for you.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <button class="faq-question">
+          How long is the initial consultation?
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-content">
+            <p>Dr. Noot schedules generous time for each patient. Initial consultations typically take 60-90 minutes to ensure thorough examination and comprehensive treatment discussion.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <button class="faq-question">
+          Do you handle dental emergencies?
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-content">
+            <p>Yes, Dr. Noot provides emergency dental care for patients. Call our office and we'll arrange prompt treatment to address your urgent dental needs using biomimetic approaches whenever possible.</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 {# TESTIMONIAL SECTION #}
-<section class="section">
+<section class="testimonials">
   <div class="container">
     <div class="section-header">
       <h2>Why Patients Choose Dr. Noot</h2>
+      <p>Real experiences from Utah County families:</p>
     </div>
     
-    <div class="grid grid-3">
-      <div class="card">
-        <p><em>"Dr. Noot has saved at least eight of my natural teeth that other dentists wanted to crown or extract."</em></p>
-        <p><strong>– Derek S.</strong><br><small>Long-time Patient</small></p>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <div class="testimonial-text">
+          <p>"Dr. Noot has saved at least eight of my natural teeth that other dentists wanted to crown or extract."</p>
+        </div>
+        <div class="testimonial-author">Derek S., Pleasant Grove</div>
       </div>
       
-      <div class="card">
-        <p><em>"I feel that Dr. Noot goes out of his way to provide the best quality dental treatment possible at very reasonable cost."</em></p>
-        <p><strong>– Mike C.</strong><br><small>Utah County Resident</small></p>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <div class="testimonial-text">
+          <p>"I feel that Dr. Noot goes out of his way to provide the best quality dental treatment possible at very reasonable cost."</p>
+        </div>
+        <div class="testimonial-author">Mike C., Utah County</div>
       </div>
       
-      <div class="card">
-        <p><em>"Dr. Noot's technique has saved me from several root canals. His conservative approach preserves my natural teeth."</em></p>
-        <p><strong>– Karissa H.</strong><br><small>Pleasant Grove Patient</small></p>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <div class="testimonial-text">
+          <p>"Dr. Noot's technique has saved me from several root canals. His conservative approach preserves my natural teeth."</p>
+        </div>
+        <div class="testimonial-author">Karissa H., Lehi</div>
       </div>
     </div>
   </div>
@@ -220,11 +289,11 @@ layout: base.njk
     <div class="text-center">
       <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem;">
         <a href="tel:{{ site.phone }}" class="btn btn-accent btn-large">
-          📞 Call {{ site.phone }}
+          Call {{ site.phone }}
         </a>
         
         <a href="mailto:{{ site.email }}" class="btn btn-outline-light btn-large">
-          📧 Email Us
+          Email Us
         </a>
       </div>
       
